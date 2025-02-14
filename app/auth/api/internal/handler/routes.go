@@ -148,5 +148,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 			// 	Handler: RoleSetRole(serverCtx),
 			// },
 		},
+		//使用jwt
+		// rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
 	)
 }

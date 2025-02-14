@@ -19,6 +19,8 @@ func NewServiceContext(c config.Config) *ServiceContext {
 		panic(err)
 	}
 
+	//todo: migrate
+
 	return &ServiceContext{
 		Config:  c,
 		DbEngin: db,
