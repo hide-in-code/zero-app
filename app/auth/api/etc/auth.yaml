@@ -4,3 +4,6 @@ Port: 8888
 
 Mysql:
   DataSource: root:123456@tcp(127.0.0.1:3306)/auth?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+
+Sqlite:
+  DataSource: data.db

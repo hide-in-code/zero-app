@@ -7,4 +7,7 @@ type Config struct {
 	Mysql struct {
 		DataSource string
 	}
+	Sqlite struct {
+		DataSource string
+	}
 }

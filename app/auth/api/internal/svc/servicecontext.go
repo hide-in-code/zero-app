@@ -3,8 +3,8 @@ package svc
 import (
 	"zero-app/app/auth/api/internal/config"
 
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
 )
 
 type ServiceContext struct {
@@ -14,7 +14,7 @@ type ServiceContext struct {
 
 func NewServiceContext(c config.Config) *ServiceContext {
 	// gorm支持
-	db, err := gorm.Open("mysql", c.Mysql.DataSource)
+	db, err := gorm.Open(sqlite.Open(c.Sqlite.DataSource), &gorm.Config{})
 	if err != nil {
 		panic(err)
 	}
